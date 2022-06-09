@@ -1,0 +1,52 @@
+/* Containers */
+/* 1. The div container */
+.yo{
+    color: aqua;
+    background-color: #ff1548;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* 2. */
+
+/* Adding CSS to HTML */
+/* 1. Inline method */
+
+/* 2.  External Method */
+
+/* 3. Internal Method */
+
+/* CSS Tricks */
+/* THESE ARE EXAMPLES (Fix later) */
+
+/* MARGIN (margin:)
+Margin is a shorthand property and accepts up to four values, shown here: */
+/* SHORTHAND: 
+Ex: */
+ .box {
+    margin: <margin-top> || <margin-right> || <margin-bottom> || <margin-left>
+}
+/* How it looks: */
+.box {
+    margin: 0 1.5em 0 1.5em;
+  }
+/* LONGHAND: */
+.box {
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+
+  /* auto and centering (auto)
+Each of the margin properties can also accept a value of auto. In most cases, a
+value of auto will be equivalent to a value of 0. auto is handy for horizontal 
+centering:*/
+   .container {
+    width: 980px;
+    margin: 0 auto;
+  }
+/* NOTE: auto is useful only for horizontal centering, and so using auto for top
+and bottom margins will not center an element vertically, */
+
+/* Margin Collapse
+ */
