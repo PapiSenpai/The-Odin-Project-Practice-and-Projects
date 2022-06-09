@@ -15,6 +15,15 @@
 
 /* 3. Internal Method */
 
+
+/* Block-level Elements
+A block-level element always starts on a new line, and the browsers 
+automatically add some space (a margin) before and after the element.
+Two commonly used block elements are: <p> and <div>.
+*/
+
+
+
 /* CSS Tricks */
 /* THESE ARE EXAMPLES (Fix later) */
 
@@ -48,5 +57,12 @@ centering:*/
 /* NOTE: auto is useful only for horizontal centering, and so using auto for top
 and bottom margins will not center an element vertically, */
 
-/* Margin Collapse
+/* Margin Collapsing
+If two vertically adjacent elements both have a margin set on them and their 
+margins touch, the larger of the two margins remains and the smaller one 
+disappears. Although collapsing margins may seem unintuitive at first glance,
+they are actually useful for a few reasons. 1st They prevent empty elements 
+from adding extra,usually undesirable, vertical margin space. 2nd they allow 
+for a more consistent approach to declaring universal margins across page 
+elements. 3rd margin collapse also applies to nested elements.
  */
