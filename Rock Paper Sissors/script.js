@@ -5,4 +5,8 @@ let scissors = 1;
 let playerScore = 0;
 let computerScore = 0;
 
-fuction 
+console.log("hello world");
+
+function playGame(){
+    
+}
