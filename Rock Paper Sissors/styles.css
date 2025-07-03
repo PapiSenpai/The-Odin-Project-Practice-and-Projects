@@ -2,7 +2,7 @@ body {
     font-family: 'Times New Roman';
     min-height: 100vh;
     margin: auto;
-    background-color: black;
+    background-color: white;
     display: flex;
     flex-direction: column;
 }
@@ -11,4 +11,5 @@ body {
     background-color: bisque;
     display: flex;
     justify-content: center;
+    
 }
