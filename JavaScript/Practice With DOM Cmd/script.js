@@ -36,4 +36,33 @@ container.appendChild(colorful);
 
 // This section will create some events
 const btn = document.querySelector('#btn');
-btn.onclick = () => alert("Hello World!")
+
+// using an event listner that selects all containers
+// This though is a node list. Similar to an array
+const buttons = document.querySelectorAll("button");
+
+
+// Event Listeners
+btn.addEventListener("click", alertFunc); // need this if I want to create a call back in the format of function(e)
+
+// can change event back to e
+btn.addEventListener("click", function(e){
+    console.log(e);
+    // debugger;
+    console.log(e.target);
+    e.target.style.background = "blue";  // changes the button to blue when pressed
+});
+
+buttons.forEach((button) => {
+    // .foreach is used to iterate through each element
+    buttons.forEach((button) => {
+        alert(button.id)
+    }); 
+});
+
+
+// Fucntion list
+// Event Function Test 
+function alertFunc(){
+    alert("Clicked!"); 
+}

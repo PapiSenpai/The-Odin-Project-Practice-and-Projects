@@ -1,3 +1,4 @@
+// const mainCont = document.querySelector("#game-container"); 
 let rock = 3;
 let paper = 2;
 let scissors = 1;
