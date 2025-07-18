@@ -9,5 +9,8 @@ let computerScore = 0;
 console.log("hello world");
 
 function playGame(){
-    
+    let choice = Math.floor(Math.random() * 3);
+    if (choice === 1){
+
+    }
 }
