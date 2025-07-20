@@ -31,30 +31,15 @@ button {
     align-items: self-start;
 }
 
-/* .rock{
+.rock-container, .paper-container, .scissor-container{
     display: flex;
-} */
-
-.rock-container{
-    height: 150px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: self-end;
+    flex-direction: column;
+    align-items: center;
+    /* align-items: self-end; */
 }
 
-.paper-container{
+.rock-container img, .paper-container img, .scissor-container img{
     height: 150px;
     width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: self-end;
-}
-
-.scissor-container{
-    height: 150px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: self-end;
+    object-fit: cover; 
 }
