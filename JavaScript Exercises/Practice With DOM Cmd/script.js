@@ -12,6 +12,7 @@ const head3 = document.createElement('h3');
 head3.style.color = 'blue';
 
 content.classList.add('content');
+
 content.textContent = "This is interesting...";
 para.textContent = "Im RED!";
 head3.textContent  = "Im a blue h3!!!"
