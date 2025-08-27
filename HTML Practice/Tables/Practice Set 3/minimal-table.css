@@ -1,0 +1,45 @@
+html {
+  font-family: sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2px solid rgb(0, 0, 0);
+  letter-spacing: 1px;
+  font-size: 0.8rem;
+}
+
+td, th {
+  border: 1px solid rgb(190,190,190);
+  padding: 10px 20px;
+}
+
+th {
+  background-color: rgb(9, 136, 19);
+}
+
+td {
+  text-align: center;
+}
+
+/* Anything that is encapsulated by "tbody" or "tfoot" or "thead" will be affected */
+tbody {
+  font-size: 95%;
+  font-style: italic;
+}
+
+tfoot {
+  font-weight: bold;
+}
+
+tr:nth-child(even) td {
+  background-color: rgb(151, 35, 35);
+}
+
+tr:nth-child(odd) td {
+  background-color: rgb(14, 94, 94);
+}
+
+caption {
+  padding: 10px;
+}

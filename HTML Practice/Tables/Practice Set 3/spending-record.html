@@ -13,16 +13,22 @@
 
       <table>
         <caption>How I chose to spend my money</caption>
-          <tr>
-            <th>Purchase</th>
-            <th>Location</th>
-            <th>Date</th>
-            <th>Evaluation</th>
-            <th>Cost (€)</th>
-          </tr>
-          <tr>
-            <td>SUM</td>
-            <td>118</td>
+            <thead>
+              <!-- testing out if can select with class, id, or type selectors  -->
+            <tr class="test"> 
+                <th scope="col">Purchase</th>
+                <th scope="col">Location</th>
+                <th scope="col">Date</th>
+                <th scope="col">Evaluation</th>
+                <th scope="col">Cost (€)</th>
+            </tr>
+            </thead>
+        <tbody> <!-- encapsulates set of table rows -->
+            <tr>
+            <tfoot> <!-- sends HTML element to bottom of table-->
+                <td colspan="4">SUM</td>
+                <td>118</td>
+            </tfoot>
           </tr>
           <tr>
             <td>Haircut</td>
@@ -52,6 +58,7 @@
             <td>Good</td>
             <td>5</td>
           </tr>
+        </tbody>
     </table>
 
   </body>
