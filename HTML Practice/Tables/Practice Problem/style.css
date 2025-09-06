@@ -1,0 +1,38 @@
+/* 
+START OF CONFIGURATIONS
+*/
+
+/* 
+The point of this somewhat ridiculous string of font-families is to
+try using the default font of the system’s user interface. 
+*/
+
+body {
+  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+/* 
+END OF CONFIGURATIONS
+*/
+
+/* Page Formating */
+.head{
+    height: 20vh;
+    background-color: aqua;
+}
+.body{
+    height: 80vh;
+    background-color: purple;
+}
+
+
+/* Table Formating */
+table, td, tr, th{
+    background-color: lightblue;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td, th{
+    padding: 10px 20px;
+}
+

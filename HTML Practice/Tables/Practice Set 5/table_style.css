@@ -3,7 +3,7 @@ html {
 }
 
 table {
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
   border: 2px solid rgb(0, 0, 0);
   letter-spacing: 1px;
   font-size: 0.8rem;
@@ -38,6 +38,12 @@ tr:nth-child(even) td {
 
 tr:nth-child(odd) td {
   background-color: rgb(14, 94, 94);
+}
+
+/* This allows any elements that the mouse hovers over to
+    be affected be a corresponding CSS selector */
+td:hover {
+  background-color: yellow !important;
 }
 
 caption {

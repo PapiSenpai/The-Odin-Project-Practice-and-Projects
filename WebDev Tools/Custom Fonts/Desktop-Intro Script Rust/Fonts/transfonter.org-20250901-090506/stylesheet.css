@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Intro Rust G Base 2 Line';
+    src: url('IntroRustG-Base2Line.woff2') format('woff2'),
+        url('IntroRustG-Base2Line.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

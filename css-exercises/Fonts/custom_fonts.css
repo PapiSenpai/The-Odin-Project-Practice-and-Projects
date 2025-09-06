@@ -1,0 +1,40 @@
+/* General setup */
+
+/* This is a template from the generated 'stylesheet.css' file in the fonts folder */
+@font-face {
+    font-family: 'Intro Rust G Base 2 Line'; /* Name of the font to use */
+    src: url('fonts/IntroRustG-Base2Line.woff2') format('woff2'),
+        url('fonts/IntroRustG-Base2Line.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+  font-size: 10px;
+  margin: 0;
+                /* This is where we add the font to the page */
+  font-family: 'Intro Rust G Base 2 Line', sans-serif;
+}
+
+body {
+  width: 80%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 3.2rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  word-spacing: 0.6rem;
+}

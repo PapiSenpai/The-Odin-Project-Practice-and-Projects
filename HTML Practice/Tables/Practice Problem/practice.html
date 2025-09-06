@@ -1,67 +1,116 @@
+<!-- 
+Running Notes:
+- For the next time tables are created, attempt to know beforehand the amount of cells
+    that are to be visualized. Then use an Emmet snippit to create
+
+
+
+
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <title>Document</title>
+    <title>Table Practice</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
-    <table>
-        <thead>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </thead>
+    <div class="header">
+        <div id="head">YO</div>
+        YOOOOOO
+    </div>
+    <div class="body">
+        <div id="table_container"></div>
+            <table>
+                <thead>
+                    <tr>
+                        <td colspan="2" rowspan="2"></td>
+                        <th id="name">Name</th>
+                        <th id="mass">Mass (10<sup>24</sup>kg)</th>
+                        <th id="diameter">Diameter (km)</th>
+                        <th id="density">Density (kg/m<sup>3</sup>)</th>
+                        <th id="gravity">Gravity (m/s<sup>2</sup>)</th>
+                        <th id="length_of_day">Length Of Day (hours)</th>
+                        <th id="distance_from_sun">Distance from Sun (10<sup>6</sup>km)</th>
+                        <th id="mean_temp">Mean temperature (°C)</th>
+                        <th id="num_of_moons">Number of moons</th>
+                        <th id="notes">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th colspan="2" rowspan="4" id="terrestial"> 
+                            Terrestial Planets
+                        </th>
+                        <th id="Mercury" headers="terrestial">Mercury</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th id="Venus" headers="terrestial">Venus</th>                        
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th id="Earth" headers="terrestial">Earth</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th id="Mars" headers="terrestial">Mars</th>                        
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <!-- 2nd Group -->
+                    <tr>
+                        <th rowspan="2" id="jovian">Jovian Planets</th>
+                        <th id="gas" headers="jovian">Gas Giants</th>                        
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th id="ice" headers="jovian">Ice Giants</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <!-- <th id="ice" headers="jovian">Ice Giants</th> -->
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </tbody>
 
-        <tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </tbody>
-
-        <tfoot>
-            
-        </tfoot>
-    </table>
+                <tfoot>
+                    
+                </tfoot>
+            </table>
+    </div>
 </body>
 </html>
