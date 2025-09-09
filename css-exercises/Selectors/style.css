@@ -1,0 +1,32 @@
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+/* Add styles here */
+/* task 1 */
+/* h1{
+    color: blue;
+}
+h2{
+    background-color: blue;
+    color: white;
+}
+span{
+    font-size: 200%;
+} */
+
+/* Task 2 */
+#special{
+    background: yellow;
+}
+
+.alert{
+    border: 2px solid grey;
+}
+
+.stop{
+    background-color: red;
+}
+
+.go{
+    background-color: green;
+}
