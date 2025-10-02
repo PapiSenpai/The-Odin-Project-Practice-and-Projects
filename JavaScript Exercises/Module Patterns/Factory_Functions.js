@@ -1,3 +1,9 @@
+/**
+ * This will go over the topic of factory functions, private variables
+ * and some uses of destrucuring.
+ * 
+ */
+
 function makeAdding (firstNumber) {
   // "first" is scoped within the makeAdding function
   const first = firstNumber;
@@ -56,3 +62,53 @@ const array = [1, 2, 3, 4, 5];
 const [ zerothEle, firstEle ] = array;
 // This creates zerothEle and firstEle, both of which point
 // to the elements in the 0th and 1st indices of the array
+
+// Example of a Private Variable
+function createUser (name) {
+  const discordName = "@" + name;
+
+  // The var reputation is the private var
+  let reputation = 0;
+  const getReputation = () => reputation;
+  const giveReputation = () => reputation++;
+
+  return { name, discordName, getReputation, giveReputation };
+}
+
+const josh = createUser("josh");
+josh.giveReputation();
+josh.giveReputation();
+
+console.log({
+  discordName: josh.discordName,
+  reputation: josh.getReputation()
+});
+// logs { discordName: "@josh", reputation: 2 }
+
+//Prototypal inheritance with factories
+function createPlayer (name, level) {
+  const { getReputation, giveReputation } = createUser(name);
+
+  const increaseLevel = () => level++;
+  return { name, getReputation, giveReputation, increaseLevel };
+}
+
+function createPlayer (name, level) {
+  const user = createUser(name);
+
+  const increaseLevel = () => level++;
+  return Object.assign({}, user, { increaseLevel });
+}
+
+// Pattern of wrapping a factory function inside an IIFE (module pattern)
+const calculator = (function () {
+  const add = (a, b) => a + b;
+  const sub = (a, b) => a - b;
+  const mul = (a, b) => a * b;
+  const div = (a, b) => a / b;
+  return { add, sub, mul, div };
+})();
+
+calculator.add(3,5); // 8
+calculator.sub(6,2); // 4
+calculator.mul(14,5534); // 77476
