@@ -102,3 +102,36 @@ const people = [
   'Grace Baker'
 ];
 
+
+// Task 4: create a list of list of boulevads in Paris that contain 'de' in the name
+// Site Used: https://en.wikipedia.org/wiki/Category:Bolevards_in_Paris
+// Only to be used for the website, wont work otherwise
+// const category = document.querySelector('.mw_category');
+// const links = Array.from(category.querySelector('a'));
+// const de = links
+//             .map(link => link.textContent)
+//             .filter(streetName => streetName.includes('de'));
+
+// console.log(de);
+
+// Task 5: Sort Excercise
+console.log('Task 5:');
+const alpha = people.sort((lastOne, nextOne) => {
+  const [aLast, aFirst] = lastOne.split(', ');
+  const [bLast, bFirst] = nextOne.split(', ');
+  return aLast > bLast ? 1 : -1;
+});
+console.log(alpha);
+
+
+// Task 6: Sum up instances of each repeating word
+const data = ['car', 'car', 'truck', 'truck']
+
+const transportation = data.reduce((obj, item)=>{
+  if(!obj[item]){
+    obj[item] = 0;
+  }
+  obj[item]++;
+  return obj;
+}, {});
+console.log(transportation);
