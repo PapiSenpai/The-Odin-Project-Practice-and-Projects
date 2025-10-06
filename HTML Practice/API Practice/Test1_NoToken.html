@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesium Map Example (No Token Required)</title>
+    <!-- Include the Cesium library -->
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.121/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.121/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <style>
+        #cesiumContainer {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="cesiumContainer"></div>
+    
+    <script>
+        // No Cesium Ion token required for this example
+        // Uses OpenStreetMap tiles and simple ellipsoid terrain
+        const viewer = new Cesium.Viewer('cesiumContainer', {
+            imageryProvider: new Cesium.UrlTemplateImageryProvider({
+                url: 'https://a.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                credit: '© OpenStreetMap contributors'
+            }),
+            baseLayerPicker: false,
+            geocoder: true,
+            timeline: false,
+            animation: false,
+            terrainProvider: new Cesium.EllipsoidTerrainProvider()
+        });
+
+        // Add a location marker for New York City
+        const newYork = Cesium.Cartesian3.fromDegrees(-74.006, 40.7128, 10000);
+        
+        viewer.entities.add({
+            position: newYork,
+            point: {
+                pixelSize: 10,
+                color: Cesium.Color.RED
+            },
+            label: {
+                text: 'New York City',
+                font: '14pt sans-serif',
+                fillColor: Cesium.Color.YELLOW,
+                outlineColor: Cesium.Color.BLACK,
+                outlineWidth: 2,
+                style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+                pixelOffset: new Cesium.Cartesian2(0, -9)
+            }
+        });
+
+        // Fly the camera to New York
+        viewer.camera.flyTo({
+            destination: newYork,
+            duration: 3
+        });
+    </script>
+</body>
+</html>
