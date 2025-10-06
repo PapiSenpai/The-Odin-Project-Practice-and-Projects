@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesium Map Example</title>
+    <!-- Include the Cesium library -->
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.121/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.121/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+    <style>
+        #cesiumContainer {
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="cesiumContainer"></div>
+    
+    <script>
+        // Set your Cesium Ion access token (replace with your own token from https://cesium.com/ion)
+        // For testing, you can use Cesium's default token, but get your own for production
+        Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlYWE1OWUxNy1mMWZiLTQzYjYtYTQ0OS1kMWFjYmFkNjc5YzciLCJpZCI6NTc3MzMsImlhdCI6MTYyNzg0NTE4Mn0.XcKpgANiY19MC4bdFUXMVEBToBmqS8kuYpUlxJHYZxk';
+
+        // Create the Cesium Viewer with updated API
+        const viewer = new Cesium.Viewer('cesiumContainer', {
+            // Use Cesium.Terrain.fromWorldTerrain() instead of deprecated createWorldTerrain()
+            terrain: Cesium.Terrain.fromWorldTerrain(),
+            imageryProvider: new Cesium.IonImageryProvider({ assetId: 2 }),
+            baseLayerPicker: true,
+            geocoder: true,
+            timeline: false,
+            animation: false
+        });
+
+        // Add a location marker for New York City
+        const newYork = Cesium.Cartesian3.fromDegrees(-74.006, 40.7128, 10000);
+        
+        viewer.entities.add({
+            position: newYork,
+            point: {
+                pixelSize: 10,
+                color: Cesium.Color.RED
+            },
+            label: {
+                text: 'New York City',
+                font: '14pt sans-serif',
+                fillColor: Cesium.Color.YELLOW,
+                outlineColor: Cesium.Color.BLACK,
+                outlineWidth: 2,
+                style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+                pixelOffset: new Cesium.Cartesian2(0, -9)
+            }
+        });
+
+        // Fly the camera to New York
+        viewer.camera.flyTo({
+            destination: newYork,
+            duration: 3
+        });
+    </script>
+</body>
+</html>
