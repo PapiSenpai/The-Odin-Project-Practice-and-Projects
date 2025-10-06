@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesium API Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .error {
+            background-color: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .success {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .code {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+            margin-top: 30px;
+        }
+        a {
+            color: #1976d2;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cesium API Migration Guide</h1>
+    
+    <div class="error">
+        <strong>❌ Deprecated (Causes Error):</strong>
+        <div class="code">
+// This will throw: "Uncaught TypeError: Cesium.createWorldTerrain is not a function"
+const viewer = new Cesium.Viewer('cesiumContainer', {
+    terrainProvider: Cesium.createWorldTerrain()
+});
+        </div>
+    </div>
+
+    <div class="success">
+        <strong>✅ Current API (Works):</strong>
+        <div class="code">
+// Use Cesium.Terrain.fromWorldTerrain() instead
+const viewer = new Cesium.Viewer('cesiumContainer', {
+    terrain: Cesium.Terrain.fromWorldTerrain()
+});
+        </div>
+    </div>
+
+    <h2>Key Changes</h2>
+    <ul>
+        <li><strong>Method:</strong> <code>createWorldTerrain()</code> → <code>Terrain.fromWorldTerrain()</code></li>
+        <li><strong>Property:</strong> <code>terrainProvider</code> → <code>terrain</code></li>
+        <li><strong>Reason:</strong> Cesium updated their terrain API in version 1.104+</li>
+    </ul>
+
+    <h2>Available Examples</h2>
+    <ul>
+        <li><a href="Test1.html">Test1.html</a> - Main version with Cesium Ion token</li>
+        <li><a href="Test1_NoToken.html">Test1_NoToken.html</a> - Alternative without token requirement</li>
+    </ul>
+
+    <h2>Setup Requirements</h2>
+    <ol>
+        <li>Include Cesium library CDN in your HTML</li>
+        <li>Set up a Cesium Ion token (for Test1.html) or use OpenStreetMap (for Test1_NoToken.html)</li>
+        <li>Use the updated <code>terrain</code> property instead of <code>terrainProvider</code></li>
+        <li>Serve files through HTTP server for best results</li>
+    </ol>
+
+    <h2>Additional Resources</h2>
+    <ul>
+        <li><a href="https://cesium.com/docs/" target="_blank">Cesium Documentation</a></li>
+        <li><a href="https://cesium.com/ion/" target="_blank">Get Cesium Ion Token</a></li>
+        <li><a href="https://github.com/CesiumGS/cesium" target="_blank">Cesium GitHub Repository</a></li>
+    </ul>
+
+    <div class="success">
+        <strong>💡 Pro Tip:</strong> If you don't want to register for a Cesium Ion token, use the 
+        <a href="Test1_NoToken.html">Test1_NoToken.html</a> version which uses OpenStreetMap tiles 
+        and works without any registration!
+    </div>
+</body>
+</html>
