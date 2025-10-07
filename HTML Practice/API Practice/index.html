@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cesium API Practice - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        .card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        .card p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+            font-weight: 500;
+        }
+        .btn:hover {
+            background: #764ba2;
+        }
+        .btn-secondary {
+            background: #6c757d;
+        }
+        .btn-secondary:hover {
+            background: #5a6268;
+        }
+        .alert {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #856404;
+        }
+        .alert strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .code-inline {
+            background: #e9ecef;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗺️ Cesium API Practice</h1>
+        <p class="subtitle">Fixed implementation of Cesium.js for 3D globe visualization</p>
+
+        <div class="alert">
+            <strong>⚠️ Issue Fixed:</strong>
+            The error <code class="code-inline">Cesium.createWorldTerrain is not a function</code> has been resolved by updating to the current Cesium API.
+        </div>
+
+        <div class="card">
+            <h2>🌍 Test1.html</h2>
+            <p>Main implementation using Cesium Ion for high-quality terrain and imagery. Requires a free Cesium Ion token (included for testing).</p>
+            <a href="Test1.html" class="btn">Launch Map</a>
+        </div>
+
+        <div class="card">
+            <h2>🗺️ Test1_NoToken.html</h2>
+            <p>Alternative version using OpenStreetMap tiles. No registration or token required - works immediately!</p>
+            <a href="Test1_NoToken.html" class="btn">Launch Map (No Token)</a>
+        </div>
+
+        <div class="card">
+            <h2>📚 API_Comparison.html</h2>
+            <p>Documentation showing the difference between the deprecated and current Cesium API, along with migration guide.</p>
+            <a href="API_Comparison.html" class="btn btn-secondary">View Comparison</a>
+        </div>
+
+        <div class="card">
+            <h2>📖 README.md</h2>
+            <p>Comprehensive guide with troubleshooting steps, usage instructions, and additional resources.</p>
+            <a href="README.md" class="btn btn-secondary">Read Documentation</a>
+        </div>
+
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #e9ecef; text-align: center; color: #666;">
+            <p><strong>Quick Start:</strong> Click any "Launch Map" button above to see the Cesium globe in action!</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">For best results, serve these files through a local HTTP server.</p>
+        </div>
+    </div>
+</body>
+</html>
