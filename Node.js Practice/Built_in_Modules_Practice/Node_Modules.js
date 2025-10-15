@@ -54,22 +54,23 @@ const absolute = path.resolve(__dirname,
                                 'test.txt');
 console.log(absolute);
 
+
 /**
  * File Sync Module
  *  - This allows for the use of 
  * 
  */
 
-const {readFileSync, writeFileSync, readFile} = require('fs');
+const {readFileSync, writeFileSync, readFile, writeFile} = require('fs');
+// Synchronous Method (unefficient)
+// read file
+const first = readFileSync(path.join(__dirname, '..','SubFolder', 'first.txt'), 'utf8');
+const second = readFileSync(path.join(__dirname, '..','SubFolder', 'second.txt'), 'utf8');
+//Write to a file
+writeFileSync(
+    path.join('..', 'SubFolder', 'result.txt'),
+    `Here is the result : ${first}, ${second}`
+)
 
-// // read file
-// const first = readFileSync(path.join(__dirname, '..','SubFolder', 'first.txt'), 'utf8');
-// const second = readFileSync(path.join(__dirname, '..','SubFolder', 'second.txt'), 'utf8');
-// //Write to a file
-// writeFileSync(
-//     path.join('..', 'SubFolder', 'result.txt'),
-//     `Here is the result : ${first}, ${second}`
-// )
 
-// Asyncronus Method (Using Callbacks)
-readFile()
+

@@ -1,0 +1,1 @@
+The result is: Hello!, Opened the second file!
