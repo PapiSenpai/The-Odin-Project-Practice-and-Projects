@@ -5,6 +5,11 @@
 
 .container {
   text-align: center;
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 3px;
+  min-height: 100vh;
 }
 
 .container div {
@@ -17,15 +22,29 @@
 
 .header {
   background-color: #393f4d;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  /* justify-content: end; */
+  gap: 10%;
+  grid-column: 1/-1;
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
+  display: grid;
+  grid-row: 1/-1;
+  grid-auto-flow: column;
+  list-style-type: none;
 }
 
 .sidebar {
   background-color: #C50208;
+  display: grid;
+  gap: 10px;
+  grid-column: 1/2;
+  grid-row: 2/3;
 }
 
 .sidebar .photo {
@@ -34,6 +53,8 @@
   font-size: 12px;
   font-weight: normal;
   border-radius: 10px;
+  grid-area: 1/1/2/1;
+
 }
 
 
