@@ -102,3 +102,10 @@ const people = [
   'Grace Baker'
 ];
 
+
+// max and min of an arr
+arr = [1 , 9, 6,2, 3, 4, 4, 5];
+
+arr_sorted = Math.max(...arr);
+
+console.log(`This is the sorted array after using the max and ... methods: ${arr_sorted}`);
