@@ -9,7 +9,7 @@ const people = [
 
 
 // Some practice with .filter
-console.log(people.filter(a => aage< 30));
+console.log(people.filter(a => age< 30));
 
 
 // .map
