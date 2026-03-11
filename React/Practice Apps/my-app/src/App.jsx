@@ -30,7 +30,7 @@ function App() {
       </p>
 
       <button>
-        Eat My Ass
+        Place holder
       </button>
 
     </>
